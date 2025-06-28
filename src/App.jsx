@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PostsCard from './PostsCard';
 import PostCard from './PostCard';
 
@@ -48,10 +49,17 @@ function App() {
   });
 
   return (
-    <div>
-      {/* <PostsCard getPostsData={getPostsData} /> */}
-      <PostCard getPostsData={getPostsData} />
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<PostsCard getPostsData={getPostsData} />} />
+          <Route
+            path="/post/:id/"
+            element={<PostCard getPostsData={getPostsData} />}
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

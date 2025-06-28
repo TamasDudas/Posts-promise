@@ -11,20 +11,20 @@ export default function Comments({ comments }) {
           >
             <h4 className="text-md font-semibold mb-2">Komment #{index + 1}</h4>
             <p className="mb-1">
-              <strong>1. Post ID:</strong> {comment.postId || 'Nincs Post ID'}
+              <strong>Post ID:</strong> {comment.postId || 'Nincs Post ID'}
             </p>
             <p className="mb-1">
-              <strong>2. Komment ID:</strong> {comment.id || 'Nincs ID'}
+              <strong>Komment ID:</strong> {comment.id || 'Nincs ID'}
             </p>
             <p className="mb-1">
-              <strong>3. Komment címe:</strong> {comment.name || 'Nincs cím'}
+              <strong>Komment címe:</strong> {comment.name || 'Nincs cím'}
             </p>
             <p className="mb-1">
-              <strong>4. Kommentelő email:</strong>{' '}
+              <strong>Kommentelő email:</strong>{' '}
               {comment.email || 'Nincs email'}
             </p>
             <p className="mb-1">
-              <strong>5. Komment tartalma:</strong>
+              <strong>Komment tartalma:</strong>
             </p>
             <div className="bg-gray-100 p-2 rounded text-sm">
               {comment.body
